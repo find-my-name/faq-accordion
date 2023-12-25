@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+  background: url("/assets/images/background-pattern-desktop.svg") no-repeat
+    center top;
+  background-size: 100% auto;
+  background-color: hsl(275, 100%, 97%);
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.container {
+  width: 40%;
+  background-color: hsl(0, 0%, 100%);
+  padding: 2.8em 2.5em;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px -15px rgba(0, 0, 0, 0.5);
+}
+
+.container ul {
+  list-style: none;
+}
+
+.container .title {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+  margin-bottom: 30px;
+}
+
+.container .title h1 {
+  font-size: 3.5em;
+  color: hsl(292, 42%, 14%);
+}
+
+.faq-accordion .question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0;
+  transition: margin-bottom 0.3s ease-in-out;
+}
+
+.faq-accordion .question img {
+  width: 30px;
+}
+
+.faq-accordion .question h3 {
+  font-weight: 600;
+}
+
+.faq-accordion li {
+  cursor: pointer;
+  color: hsl(292, 42%, 14%);
+}
+
+.faq-accordion li p {
+  color: hsl(292, 16%, 49%);
+  max-height: 0;
+  overflow: hidden;
+  line-height: 1.5;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.faq-accordion .question h3:hover {
+  color: hsl(281, 83%, 54%);
+}
+
+.border {
+  border: 1px solid hsla(292, 16%, 49%, 0.5);
+  opacity: 0.2;
+  margin: 1.5em 0;
+}
+
+.hidden {
+  max-height: 0;
+}
+
+.faq-accordion li p.visible {
+  max-height: 400px;
+}
+
+/* Utility Classes */
+.faq-accordion .question.mb-lg {
+  margin-bottom: 1em;
+}
+
+@media (max-width: 576px) {
+  body {
+    max-width: auto;
+    background: url("/assets/images/background-pattern-mobile.svg") no-repeat
+      center top;
+    background-size: 100% auto;
+    background-color: hsl(275, 100%, 97%);
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  .container .title h1 {
+    font-size: 2.5em;
+  }
+
+  .container .title img {
+    width: 30px;
+  }
+
+  .faq-accordion .question {
+    gap: 20px;
+  }
+
+  .faq-accordion .question h3 {
+    font-size: 1em;
+    font-weight: 600;
+  }
+
+  .faq-accordion li p {
+    font-size: 15px;
+  }
+}
